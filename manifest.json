@@ -1,9 +1,13 @@
 {
-    "name": "No Flow | Less Flow",
+    "name": "Less Flow",
     "description": "Minha primeira extensão para o Google Chrome",
     "version": "1.0",
     "manifest_version": 3,
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["activeTab", "scripting", 
+    "tabs",
+    "webNavigation",
+    "storage",
+    "unlimitedStorage"],
     "action": {
         "default_popup": "index.html"
     }
