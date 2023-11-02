@@ -1,12 +1,36 @@
 const button = document.querySelector('button');
 
 const executeCurrentTab = () => {
+    const feed = document.querySelector("article").parentElement;
+    let postCount = 0;
+    // console.log(feed)
+    
+    if (feed) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.previousSibling instanceof HTMLElement && mutation.previousSibling.tagName === 'ARTICLE' && mutation.removedNodes.length == 0) {
+                    // console.log(mutation);
+                    postCount++; 
+                    if(postCount % 5 == 0) alert("Você visualizou " + postCount + " posts. Deseja continuar?");
+                }
+            });
+        });
+        observer.observe(feed, { childList: true, subtree: true, attributes: true });
+    } else {
+        console.error('No feed found.');
+    }
+
+    // selecionar elementos
     const stories = document.querySelector('._aao_');
     const sugestions = document.querySelector('._aak3'); 
-    const explore = document.querySelector('.x1iyjqo2 :nth-child(3)');
-    const messages = document.querySelector('.x13v4lgv');
-    const likes = document.querySelector('.x1iyjqo2 :nth-child(6)');
-    const reels = document.querySelector('.x1iyjqo2 :nth-child(4)'); 
+    const explore = document.querySelector("div.x1iyjqo2.xh8yej3 > div:nth-child(3)");
+    // console.log("explorar " + explore)
+    const messageNotifications = document.querySelector('.x13v4lgv');
+    // console.log("notificacoes das msgs " + messageNotifications)
+    const likes = document.querySelector("div.x1iyjqo2.xh8yej3 > div:nth-child(6)");
+    // console.log("curtidas " + likes)
+    let reels = document.querySelector("div.x1iyjqo2.xh8yej3 > div:nth-child(4)"); 
+    // console.log("reels " + reels)
 
     // criar botão de mostrar stories
     let storiesShowButton = document.querySelector('#storiesShowButton');
@@ -24,7 +48,6 @@ const executeCurrentTab = () => {
         storiesShowButton.style.background = 'transparent';
         storiesShowButton.style.border = 'none';
         storiesShowButton.style.cursor = 'pointer';
-
     }
 
     storiesShowButton.addEventListener('click', () => {
@@ -45,7 +68,7 @@ const executeCurrentTab = () => {
         reelsShowButton.style.justifyContent = 'center';
         reelsShowButton.style.position = 'absolute';
         reelsShowButton.style.top = '31%';
-        reelsShowButton.style.left = '43%';
+        reelsShowButton.style.left = '27%';
         reelsShowButton.style.display = 'none';
         reelsShowButton.style.background = 'transparent';
         reelsShowButton.style.border = 'none';
@@ -59,8 +82,9 @@ const executeCurrentTab = () => {
         reels.style.opacity = '1';
     });
     
+    // definir transição dos elementos
     explore.style.transition = "opacity 0.4s ease-in-out";
-    messages.style.transition = "opacity 0.4s ease-in-out";
+    if(messageNotifications) messageNotifications.style.transition = "opacity 0.4s ease-in-out";
     likes.style.transition = "opacity 0.4s ease-in-out";
     stories.style.transition = "opacity 0.4s ease-in-out";
     reels.style.transition = "opacity 0.4s ease-in-out";
@@ -72,14 +96,13 @@ const executeCurrentTab = () => {
         reels.style.pointerEvents = "auto";
         stories.style.pointerEvents = "auto";
         explore.style.display = 'block';
-        messages.style.display = 'block';
+        if(messageNotifications) messageNotifications.style.display = 'block';
         likes.style.display = 'block';
         storiesShowButton.style.display = 'none';
         reelsShowButton.style.display = 'none';
-        console.log('entrou aqui 2')
         setTimeout(function() {
             explore.style.opacity = '1';
-            messages.style.opacity = '1';
+            if(messageNotifications) messageNotifications.style.opacity = '1';
             likes.style.opacity = '1';
             reels.style.opacity = '1';
             stories.style.opacity = '1';
@@ -87,13 +110,12 @@ const executeCurrentTab = () => {
             reelsShowButton.style.opacity = '0';
             stories.style.filter = 'blur(0px)';
             reels.style.filter = 'blur(0px)';
-            console.log('entrou aqui 1')
         }, 50);
     } else {
         reels.style.pointerEvents = 'none';
         stories.style.pointerEvents = 'none';
         explore.style.opacity = '0';
-        messages.style.opacity = '0';
+        if(messageNotifications) messageNotifications.style.opacity = '0';
         likes.style.opacity = '0';
         reels.style.opacity = '0.2';
         stories.style.opacity = '0.2';
@@ -103,7 +125,7 @@ const executeCurrentTab = () => {
         reelsShowButton.style.opacity = '1';
         setTimeout(function() {
             explore.style.display = 'none';
-            messages.style.display = 'none';
+            if(messageNotifications) messageNotifications.style.display = 'none';
             likes.style.display = 'none';
             reelsShowButton.style.display = 'block';
             storiesShowButton.style.display = 'block';
@@ -125,9 +147,6 @@ const executeCurrentTab = () => {
             }, 100); 
         }
     }
-
-    // esconder botão de "New Posts"
-    // if(document.querySelector('._any9')) document.querySelector('._any9').style.display = 'none';
 }
 
 let clicks = 0;
@@ -139,7 +158,21 @@ chrome.storage.local.get(['clicks'], function(result) {
 });
 
 function updateButtonText() {
-    clicks % 2 == 0 ? button.textContent = 'Deactivate' : button.textContent = 'Activate';
+  if (clicks % 2 === 0) {
+    button.textContent = 'Activate';
+    button.disabled = false;
+    button.style.opacity = "1";
+    button.style.cursor = "pointer";
+    button.style.paddingRight = "30px";
+    button.style.paddingLeft = "30px";
+  } else {
+    button.textContent = 'Activated';
+    // button.disabled = true;
+    button.style.opacity = "0.5";
+    button.style.cursor = "context-menu";
+    button.style.paddingRight = "25px";
+    button.style.paddingLeft = "25px";
+  }
 }
 
 button.addEventListener('click', async (event) => {
@@ -151,7 +184,7 @@ button.addEventListener('click', async (event) => {
     // atualizar contador de cliques
     clicks++;
     
-    // salva o novo estado no armazenamento local
+    // // salva o novo estado no armazenamento local
     chrome.storage.local.set({ 'clicks': clicks });
 
     // executa uma query para buscar a janela ativa no navegador do usuário

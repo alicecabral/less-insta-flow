@@ -1,5 +1,5 @@
 {
-    "name": "Less Flow",
+    "name": "Less Insta Flow",
     "description": "Minha primeira extensão para o Google Chrome",
     "version": "1.0",
     "manifest_version": 3,
@@ -10,5 +10,10 @@
     "unlimitedStorage"],
     "action": {
         "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "images/logo.png",
+        "48": "images/logo.png",
+        "128": "images/logo.png"
     }
 }

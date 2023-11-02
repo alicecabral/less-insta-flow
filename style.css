@@ -1,13 +1,49 @@
+body {
+    /* background-image: url("images/background3.png"); */
+    width: 250px;
+    height: 300px;
+    background-color: #080707;
+    border: 3.5px solid transparent;
+    border-radius: 2px;
+    border-image-source: url('images/border-background.jpg');
+    border-image-slice: 10;
+    border-image-repeat: round;
+}
+
+#title {
+    width: 220px;
+    margin: 10px auto 0;
+    display: flex;
+}
+
+#logo {
+    width: 28px;
+    display: flex;
+    margin: 10px auto 0;
+}
+
+#insta-logo {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    width: 20px;
+}
+
 .button {
-    width: 100%;
-    padding: 15px;
+    padding: 50px 30px;
     border: none;
-    border-radius: 5px;
-    margin-top: 15px;
+    border-radius: 50%;
     background-color: #428d70;
     color: white;
     font-weight: 700;
     cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    margin: 40px auto 0;
+    background-image: url('images/border-background.jpg'); 
+    background-size: cover;
+    background-color: transparent;
+    font-family: inherit;
 }
 
 .button:hover {
