@@ -1,3 +1,4 @@
+
 const button = document.querySelector('button');
 
 const executeCurrentTab = () => {
@@ -90,12 +91,14 @@ const executeCurrentTab = () => {
     reels.style.transition = "opacity 0.4s ease-in-out";
     storiesShowButton.style.transition = "opacity 0.4s ease-in-out";
     reelsShowButton.style.transition = "opacity 0.4s ease-in-out";
-    
+
+    let exploreDisplay;
     // ocultar explorar, mensagens e notificações
     if(explore.style.display == "none") {
         reels.style.pointerEvents = "auto";
         stories.style.pointerEvents = "auto";
         explore.style.display = 'block';
+        exploreDisplay = explore.style.display;
         if(messageNotifications) messageNotifications.style.display = 'block';
         likes.style.display = 'block';
         storiesShowButton.style.display = 'none';
@@ -125,6 +128,7 @@ const executeCurrentTab = () => {
         reelsShowButton.style.opacity = '1';
         setTimeout(function() {
             explore.style.display = 'none';
+            exploreDisplay = explore.style.display;
             if(messageNotifications) messageNotifications.style.display = 'none';
             likes.style.display = 'none';
             reelsShowButton.style.display = 'block';
@@ -154,7 +158,7 @@ let clicks = 0;
 // recupera o estado anterior dos cliques do armazenamento local
 chrome.storage.local.get(['clicks'], function(result) {
     clicks = result.clicks || 0;
-    updateButtonText();
+    // updateButtonText();
 });
 
 function updateButtonText() {
@@ -178,9 +182,6 @@ function updateButtonText() {
 button.addEventListener('click', async (event) => {
     event.preventDefault();
 
-    // muda na janela da extensão
-    // document.body.style.background = 'red';
-    
     // atualizar contador de cliques
     clicks++;
     
@@ -200,5 +201,5 @@ button.addEventListener('click', async (event) => {
     });
 
     window.close();
-    updateButtonText();
+    // updateButtonText();
 })

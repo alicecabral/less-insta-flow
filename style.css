@@ -11,7 +11,7 @@ body {
 }
 
 #title {
-    width: 220px;
+    width: 125px;
     margin: 10px auto 0;
     display: flex;
 }
@@ -39,7 +39,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     display: flex;
-    margin: 40px auto 0;
+    margin: 55px auto 0;
     background-image: url('images/border-background.jpg'); 
     background-size: cover;
     background-color: transparent;

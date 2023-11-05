@@ -1,19 +1,22 @@
 {
     "name": "Less Insta Flow",
-    "description": "Minha primeira extensão para o Google Chrome",
+    "description": "Put an end to the flow state while scroling through Instagram!",
     "version": "1.0",
     "manifest_version": 3,
-    "permissions": ["activeTab", "scripting", 
-    "tabs",
-    "webNavigation",
-    "storage",
-    "unlimitedStorage"],
+    "permissions": [
+        "activeTab", 
+        "scripting", 
+        "tabs",
+        "webNavigation",
+        "storage",
+        "unlimitedStorage"
+    ],
     "action": {
         "default_popup": "index.html"
     },
     "icons": {
-        "16": "images/logo.png",
-        "48": "images/logo.png",
-        "128": "images/logo.png"
+        "16": "images/logo2.png",
+        "48": "images/logo2.png",
+        "128": "images/logo2.png"
     }
 }
