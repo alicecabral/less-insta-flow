@@ -24,7 +24,7 @@ Less Insta Flow é uma extensão para Google Chrome projetada para intervir na i
 ## 👩‍💻 Uso
 Depois de instalar a extensão, abra o Instagram em uma nova aba e clique no botão para ativar a extensão. A partir disso, você deverá experimentar a interface modificada. Explore a plataforma com um estado de fluxo reduzido, concentrando-se em interações significativas.
 
-## 📷 Imagens 
+## 📷 Capturas de Tela
 ![interface_lif (3)](https://github.com/alicecabral/less-insta-flow/assets/64849779/890e7ecf-dbf4-464e-86ef-c0cc9e097955)
 ![interface-alterada (2)](https://github.com/alicecabral/less-insta-flow/assets/64849779/3def9cf9-d8c8-44b9-b1e7-124e761a14b8)
 ![alerta (2)](https://github.com/alicecabral/less-insta-flow/assets/64849779/99457efd-ef29-4ac2-8b25-3dad03ecbed7)
