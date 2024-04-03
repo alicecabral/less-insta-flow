@@ -11,9 +11,9 @@ Less Insta Flow é uma extensão para Google Chrome projetada para intervir na i
 - Desabilitar e habilitar reels e stories
 
 ## ⌨️ Linguagens e Ferramentas
-### HTML
-### CSS
-### JavaScript
+- HTML
+- CSS
+- JavaScript
 
 ## ⚙️ Instalação
 - Faça o download ou clone o repositório para sua máquina local.
