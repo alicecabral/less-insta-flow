@@ -26,6 +26,6 @@ Depois de instalar a extensão, abra o Instagram em uma nova aba e clique no bot
 
 ## 📷 Capturas de Tela
 <img src="https://github.com/alicecabral/less-insta-flow/assets/64849779/3def9cf9-d8c8-44b9-b1e7-124e761a14b8" alt="Interface modificada do Instagram" min-width="400px" max-width="700px" width="700px" display="flex" justify-content="center"><br>
-<img src="https://github.com/alicecabral/less-insta-flow/assets/64849779/890e7ecf-dbf4-464e-86ef-c0cc9e097955" alt="Interface da extensão" min-width="200px" max-width="200px" width="200px" display="flex" justify-content="center">
+<img src="https://github.com/alicecabral/less-insta-flow/assets/64849779/890e7ecf-dbf4-464e-86ef-c0cc9e097955" alt="Interface da extensão" style="display: block; margin: 0 auto; min-width: 400px; max-width: 700px; width: 700px;">
 <img src="https://github.com/alicecabral/less-insta-flow/assets/64849779/99457efd-ef29-4ac2-8b25-3dad03ecbed7" alt="Alerta" min-width="300px" max-width="300px" width="300px" display="flex" justify-content="center">
 
