@@ -12,7 +12,7 @@ const executeCurrentTab = () => {
                 if (mutation.previousSibling instanceof HTMLElement && mutation.previousSibling.tagName === 'ARTICLE' && mutation.removedNodes.length == 0) {
                     // console.log(mutation);
                     postCount++; 
-                    if(postCount % 10 == 0) alert("Você visualizou " + postCount + " posts. Deseja continuar?");
+                    if(postCount % 10 == 0) alert("You have seen " + postCount + " posts. Do you want to continue?");
                 }
             });
         });
