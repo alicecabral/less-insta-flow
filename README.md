@@ -1,30 +1,31 @@
 # Less Insta Flow
 
-Less Insta Flow é uma extensão para Google Chrome projetada para intervir na interface do Instagram, com o objetivo de minimizar o estado de fluxo dos usuários ao utilizar esta plataforma de mídia social. Ao realizar alterações sutis no design, baseadas no modelo de Hook, a extensão incentiva os usuários a serem mais conscientes e intencionais em sua interação com o Instagram.
+The Less Insta Flow extension for Google Chrome is designed to intervene in the Instagram interface, with the goal of minimizing users' flow state when using this social media platform. By making subtle design changes based on the Hook model, the extension encourages users to be more mindful and intentional in their interactions with Instagram.
 
-## 📋 Funcionalidades
-- Ocultar notificações das mensagens diretas
-- Ocultar ícone de notificações
-- Ocultar ícone de explorar
-- Alerta de pausa no feed
-- Ocultar "Sugestões para você"
-- Desabilitar e habilitar reels e stories
+## 📋 Features
+- Hide direct message notification
+- Hide "New posts" button
+- Hide notifications icon
+- Pause alert in feed, stories and reels
+- Hide "Suggested for you"
+- Hide explore icon
+- Button to enable reels and stories
 
-## ⌨️ Linguagens e Ferramentas
+## ⌨️ Languages and Tools
 - HTML
 - CSS
 - JavaScript
 
-## ⚙️ Instalação
-- Faça o download ou clone o repositório para sua máquina local.
-- Abra o Google Chrome e vá para as configurações de Extensões (chrome://extensions/).
-- Habilite o "Modo Desenvolvedor" no canto superior direito.
-- Clique em "Carregar sem compactação" e selecione a pasta que contém os arquivos da extensão.
+## ⚙️ Instalation
+- Download or clone this repository into your local machine.
+- Open Google Chrome and go to Extension settings (chrome://extensions/).
+- Active "Developer mode" on the top right corner.
+- Click on "Load unpack" and select the repository folder.
 
-## 👩‍💻 Uso
-Depois de instalar a extensão, abra o Instagram em uma nova aba e clique no botão para ativar a extensão. A partir disso, você deverá experimentar a interface modificada. Explore a plataforma com um estado de fluxo reduzido, concentrando-se em interações significativas.
+## 👩‍💻 Use
+After installing the extension, open Instagram in a new tab and click on the "Active" button. From there, you should experiment the interface with some modifications. Explore the platform with reduced flow, focusing on meaningful interactions.
 
-## 📷 Capturas de Tela
+## 📷 Screenshots
   <img src="https://github.com/alicecabral/less-insta-flow/assets/64849779/890e7ecf-dbf4-464e-86ef-c0cc9e097955" alt="Interface da extensão" min-width="200px" max-width="200px" width="200px"><br>
   <img src="https://github.com/alicecabral/less-insta-flow/assets/64849779/3def9cf9-d8c8-44b9-b1e7-124e761a14b8" alt="Interface modificada do Instagram" min-width="400px" max-width="700px" width="700px"><br>
   <img src="https://github.com/alicecabral/less-insta-flow/assets/64849779/99457efd-ef29-4ac2-8b25-3dad03ecbed7" alt="Alerta" min-width="300px" max-width="300px" width="300px">
